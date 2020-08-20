@@ -73,6 +73,9 @@
     <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\EnrollmentModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Repository\CourseCommand.cs" />
+    <Compile Include="Repository\EnrollmentCommand.cs" />
+    <Compile Include="Repository\StudentCommand.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="App.xaml.cs">
@@ -110,9 +113,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\MainView.xaml">
       <SubType>Designer</SubType>
