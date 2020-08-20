@@ -70,6 +70,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\CourseModel.cs" />
+    <Compile Include="Models\EnrollmentModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="App.xaml.cs">
@@ -108,7 +111,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Repository\" />
   </ItemGroup>
   <ItemGroup>
