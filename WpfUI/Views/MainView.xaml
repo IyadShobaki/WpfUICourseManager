@@ -20,23 +20,26 @@
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Column="0" Grid.Row="0" Margin="0 0 10 0">
                     <TextBlock Text="Students"/>
-                    <ComboBox ItemsSource="{Binding Path=Students}" DisplayMemberPath="FirstName"/>
+                    <ComboBox ItemsSource="{Binding Path=Students}" DisplayMemberPath="FirstName"
+                              SelectedItem="{Binding Path=SelectedEnrollmentStudent, Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="0" Margin="0 0 10 0">
                     <TextBlock Text="Courses"/>
-                    <ComboBox ItemsSource="{Binding Path=Courses}" DisplayMemberPath="Description"/>
+                    <ComboBox ItemsSource="{Binding Path=Courses}" DisplayMemberPath="Description"
+                              SelectedItem="{Binding Path=SelectedEnrollmentCourse, Mode=TwoWay}"/>
                 </StackPanel>
                 <ListView Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="0 10 0 0"
-                          Height="200">
+                          Height="200" x:Name="Enrollments" DisplayMemberPath="EnrollmentId"
+                          SelectedItem="{Binding Path=SelectedEnrollment, Mode=TwoWay}">
                     
                 </ListView>
                 
             </Grid>
             <StackPanel Orientation="Horizontal">
                 <Button Content="Save Enrollment" HorizontalAlignment="Left" Width="150"
-                        Margin="0 10 10 0"/>
+                        Margin="0 10 10 0" x:Name="SaveEnrollment"/>
                 <Button Content="Create New Enrollment" HorizontalAlignment="Left" Width="150"
-                        Margin="0 10 10 0"/>
+                        Margin="0 10 10 0" x:Name="CreateNewEnrollment"/>
             </StackPanel>
             <StatusBar Height="25" Margin="0 10 0 0">
                 <StatusBarItem TextBlock.TextAlignment="Left">
